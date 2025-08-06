@@ -1,0 +1,290 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-none.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .bordered-element {
+            border: 1px solid #c4c4c4;
+            overflow: hidden;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .header-row {
+            background: #e6e6e6;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .tab-content {
+            padding: 16px;
+        }
+        
+        .tab-content > *  {
+            border: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+
+        .tab-title  {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+
+        .table-wrapper {
+            overflow: hidden;
+            box-sizing: border-box;
+            font: inherit;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceHI</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1498421842">CIP CTF</a></div><div class="page">2</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#80992699">Tools</a></div><div class="page">9</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1218394691">Identity Object (0x01)</a></div><div class="page">10</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1498421842">CIP CTF</h1><p id="1498421842#-uyjqk0_3">This section of the DC33 ICS Village CTF is to provide a guided intro into Common Industrial Protocol (CIP) and basic ways to exploit it.</p><section class="detached"><h2 id="1498421842#intro-to-cip" data-toc="intro-to-cip#CIP-CTF.md-intro-to-cip">Intro to CIP</h2><p id="1498421842#-uyjqk0_10">CIP is a protocol used by many industrial devices. Everything from Programmable Logic Controllers (PLC) to Variable Frequency Drives (VFD) use CIP as a means of communication.</p><p id="1498421842#-uyjqk0_11">CIP itself is simply a universal protocol for transporting data and commands. It requires a network to transport the protocol. Several different network types exist, the most common are:</p><ul class="list" id="1498421842#-uyjqk0_12" start="1"><li class="list-item" id="1498421842#-uyjqk0_14"><p id="1498421842#-uyjqk0_17">DeviceNet: CIP over CAN BUS</p></li><li class="list-item" id="1498421842#-uyjqk0_15"><p id="1498421842#-uyjqk0_18">ControlNet: CIP over coax / fiber</p></li><li class="list-item" id="1498421842#-uyjqk0_16"><p id="1498421842#-uyjqk0_19">Ethernet/IP: CIP over Ethernet</p></li></ul><p id="1498421842#-uyjqk0_13">Each network that transports CIP is designed for inter-compatability. This means that the same CIP message used on one network is also used on another network.</p></section><section class="detached"><h2 id="1498421842#cip-object-model" data-toc="cip-object-model#CIP-CTF.md-cip-object-model">CIP Object Model</h2><p id="1498421842#-uyjqk0_20">CIP is a protocol similar to a Remote Procedure Call (RPC) protocol. Every CIP packet is a command to run a Service within an Object.</p><p id="1498421842#-uyjqk0_21">Every CIP object has a Class which is a single static instance of the object, along with a variable number of Instances. Every class is defined by a unique Class ID, and every instance is defined by a unique Instance ID. The static instance of the class is always Instance ID 0.</p><p id="1498421842#-uyjqk0_22">CIP Objects also have Attributes. Each attribute is a variable which stores data. Some attributes are read-only, others have special properties such as persisting the value within them to EEPROM. Each Attribute is identified with an Attribute ID.</p><p id="1498421842#-uyjqk0_23">Finally, all CIP Objects have Services. Services are functions that can be called on the object, or on individual attributes. Every service has a unique Service ID.</p><div id="1498421842#-uyjqk0_24"><div class="detached" id="1498421842#-uyjqk0_26"><div class="tab-title"><div>Class</div></div><div class="bordered-element tab-content"><p>Every CIP object is a instance of a class. Each class is a C++ object within the code of the device. The CIP class defines the structure and functionality of the instances of that class.</p></div></div><div class="detached" id="1498421842#-uyjqk0_27"><div class="tab-title"><div>Instance</div></div><div class="bordered-element tab-content"><p>An Instance is a single instance of a class. Each instance has a unique Instance ID. The static instance of the class is always Instance ID 0. The static instance usually contains information about how many dynamic instances exist and has a completely unique structure compared to the dynamic instances.</p></div></div><div class="detached" id="1498421842#-uyjqk0_28"><div class="tab-title"><div>Attribute</div></div><div class="bordered-element tab-content"><p>An Attribute is a variable which stores data. Each attribute has a unique Attribute ID.</p></div></div><div class="detached" id="1498421842#-uyjqk0_29"><div class="tab-title"><div>Service</div></div><div class="bordered-element tab-content"><p>A Service is a function that can be called on the Class, Instance, or on individual Attributes. Every service has a unique Service ID.</p></div></div></div><p id="1498421842#-uyjqk0_25">An example of a CIP object is Class 0x01, the Identity Object (<a href="#-1218394691">Identity Object (0x01)</a>). It contains basic information about the device.</p></section><section class="detached"><h2 id="1498421842#common-cip-services" data-toc="common-cip-services#CIP-CTF.md-common-cip-services">Common CIP Services</h2><p id="1498421842#-uyjqk0_31">Many CIP objects utilize the same services. While objects do not need to implement services the same between each other, some service IDs are specified by the specification for how they work.</p><p id="1498421842#-uyjqk0_32">Here are examples of common services, which allow reading and writing data from attributes. Each service includes a usage example, shown in a pseudocode format representing a CIP message structure (e.g., as sent over EtherNet/IP). These examples assume you're targeting the Identity Object (Class 0x01, Instance 1).</p><p id="1498421842#-uyjqk0_33"><span class="control" id="1498421842#-uyjqk0_48">Get_Attribute_Single (Service ID: 0x0E)</span>: Retrieves the value of a single specified attribute from an object instance or class. <span class="control" id="1498421842#-uyjqk0_49">Usage Example</span>: To read the Vendor ID (Attribute 1) from the Identity Object.</p><div class="detached code-block" id="1498421842#-uyjqk0_34"><pre><code class="language-none">CIP Message:
+- Service: 0x0E (Get_Attribute_Single)
+- Path: Class 0x01, Instance 1, Attribute 1 (encoded as logical segments: 0x20 0x01 0x24 0x01 0x30 0x01)
+- Data: None (request has no additional data)
+
+Response: Returns the Vendor ID value (e.g., 0x0001 for Rockwell Automation).</code></pre></div><p id="1498421842#-uyjqk0_35"><span class="control" id="1498421842#-uyjqk0_50">Get_Attribute_All (Service ID: 0x01)</span>: Retrieves the values of all attributes from an object instance or class in one request. This is efficient for getting an overview.</p><p id="1498421842#-uyjqk0_36"><span class="control" id="1498421842#-uyjqk0_51">Usage Example</span>: To fetch all attributes from the Identity Object.</p><div class="detached code-block" id="1498421842#-uyjqk0_37"><pre><code class="language-none">CIP Message:
+- Service: 0x01 (Get_Attribute_All)
+- Path: Class 0x01, Instance 1 (encoded as: 0x20 0x01 0x24 0x01)
+- Data: None
+
+Response: A sequence of all attribute values (e.g., Vendor ID, Device Type, Product Code, etc., in order).</code></pre></div><p id="1498421842#-uyjqk0_38"><span class="control" id="1498421842#-uyjqk0_52">Get_Attribute_List (Service ID: 0x03)</span>: Retrieves the values of a list of specified attributes from an object. You provide a list of Attribute IDs.</p><p id="1498421842#-uyjqk0_39"><span class="control" id="1498421842#-uyjqk0_53">Usage Example</span>: To read Vendor ID (1) and Product Name (7) from the Identity Object.</p><div class="detached code-block" id="1498421842#-uyjqk0_40"><pre><code class="language-none">CIP Message:
+- Service: 0x03 (Get_Attribute_List)
+- Path: Class 0x01, Instance 1 (encoded as: 0x20 0x01 0x24 0x01)
+- Data: Number of attributes (2), followed by IDs (0x0001, 0x0007)
+
+Response: List of attribute values (e.g., Vendor ID value, then Product Name string).</code></pre></div><p id="1498421842#-uyjqk0_41"><span class="control" id="1498421842#-uyjqk0_54">Set_Attribute_Single (Service ID: 0x10)</span>: Sets (writes) the value of a single specified attribute, if it's writable.</p><p id="1498421842#-uyjqk0_42"><span class="control" id="1498421842#-uyjqk0_55">Usage Example</span>: To set a writable attribute like a custom parameter in a vendor-specific object (e.g., Attribute 10 in a hypothetical Parameter Object, Class 0x0F, Instance 1).</p><div class="detached code-block" id="1498421842#-uyjqk0_43"><pre><code class="language-none">CIP Message:
+- Service: 0x10 (Set_Attribute_Single)
+- Path: Class 0x0F, Instance 1, Attribute 10 (encoded as: 0x20 0x0F 0x24 0x01 0x30 0x0A)
+- Data: New value (e.g., 0x005A for integer 90)
+
+Response: Success code (0x00) if set, or error if not writable.</code></pre></div><p id="1498421842#-uyjqk0_44"><span class="control" id="1498421842#-uyjqk0_56">Set_Attribute_List (Service ID: 0x04)</span>: Sets the values of a list of specified attributes in one request. Similar to Get_Attribute_List but for writing multiple values atomically.</p><p id="1498421842#-uyjqk0_45"><span class="control" id="1498421842#-uyjqk0_57">Usage Example</span>: To set two writable attributes (e.g., Attributes 10 and 11 in Parameter Object, Class 0x0F, Instance 1).</p><div class="detached code-block" id="1498421842#-uyjqk0_46"><pre><code class="language-none">CIP Message:
+- Service: 0x04 (Set_Attribute_List)
+- Path: Class 0x0F, Instance 1 (encoded as: 0x20 0x0F 0x24 0x01)
+- Data: Number of attributes (2), ID 10, value (0x000A, 0x005A), ID 11, value (0x000B, 0x0014)
+
+Response: Success for each, or partial errors.</code></pre></div><p id="1498421842#-uyjqk0_47">These services are part of explicit messaging and form the basis for interacting with CIP devices, like querying status or configuring settings.</p></section><section class="detached"><h2 id="1498421842#cip-routine" data-toc="cip-routine#CIP-CTF.md-cip-routine">CIP Routine</h2><p id="1498421842#-uyjqk0_58">CIP uses a very powerful and complex routing system.</p><p id="1498421842#-uyjqk0_59">This allows CIP messages to traverse multiple networks and devices seamlessly, as long as the networks are CIP-compatible (e.g., from EtherNet/IP to DeviceNet via a linking device). Routing ensures that commands reach the intended object, even if it's on a different subnet or physical medium. The system handles message forwarding through routers or gateways, maintaining the integrity of the data across hops.</p></section><section class="detached"><h2 id="1498421842#cip-paths" data-toc="cip-paths#CIP-CTF.md-cip-paths">CIP Paths</h2><p id="1498421842#-uyjqk0_60">CIP paths and routes specify how to address and reach a target object within a device or across networks.</p><p id="1498421842#-uyjqk0_61">A CIP path is a sequence of segments that describe the route from the source to the destination object. Paths are used in every CIP message to identify the target Class, Instance, and Attribute.</p><ul class="list" id="1498421842#-uyjqk0_62" start="1"><li class="list-item" id="1498421842#-uyjqk0_67"><p id="1498421842#-uyjqk0_71"><span class="control" id="1498421842#-uyjqk0_72">Path Segments</span>: Paths are built from segments like:</p></li><li class="list-item" id="1498421842#-uyjqk0_68"><p id="1498421842#-uyjqk0_73"><span class="control" id="1498421842#-uyjqk0_74">Logical Segments</span>: Address Class ID (e.g., 0x01 for Identity), Instance ID (e.g., 1), and Attribute ID (e.g., 1 for Vendor ID). These are the most common for local objects.</p></li><li class="list-item" id="1498421842#-uyjqk0_69"><p id="1498421842#-uyjqk0_75"><span class="control" id="1498421842#-uyjqk0_76">Port Segments</span>: Used for routing to other devices, specifying a port number (e.g., 1 for backplane) and link address (e.g., slot 0 for CPU). For example, a path &quot;1,0&quot; routes from an EtherNet/IP module (port 1) to the processor in slot 0.</p></li><li class="list-item" id="1498421842#-uyjqk0_70"><p id="1498421842#-uyjqk0_77"><span class="control" id="1498421842#-uyjqk0_78">Network Segments</span>: For crossing networks, including node addresses or IP addresses.</p></li></ul><p id="1498421842#-uyjqk0_63">Paths can be extended for multi-hop routing. Paths are encoded in a compact binary format (e.g., 0x20 for Class, followed by ID). This enables interoperability across CIP networks without changing the core message.</p><section class="detached"><h3 id="1498421842#simple-path-example" data-toc="simple-path-example#CIP-CTF.md-simple-path-example">Simple Path Example</h3><p id="1498421842#-uyjqk0_79">Path: <span class="inline-code" id="1498421842#-uyjqk0_82">1,5</span> Explanation:</p><div class="detached code-block" id="1498421842#-uyjqk0_80"><pre><code class="language-none">1 = Backplane
+5 = Slot 5 in Backplane</code></pre></div><p id="1498421842#-uyjqk0_81">The device originating the message sends the message out port 1, which is the Backplane of the PLC. It is then routed by the backplane to slot 5.</p></section><section class="detached"><h3 id="1498421842#complex-path-example-multi-hop-routing" data-toc="complex-path-example-multi-hop-routing#CIP-CTF.md-complex-path-example-multi-hop-routing">Complex Path Example: Multi-Hop Routing</h3><p id="1498421842#-uyjqk0_84">Path: <span class="inline-code" id="1498421842#-uyjqk0_87">1,2,2,192.168.1.2,1,5</span> Explanation:</p><div class="detached code-block" id="1498421842#-uyjqk0_85"><pre><code class="language-none">1 = Backplane
+2 = Slot 2 (Slot of network card)
+2 = Port 2 (Ethernet Port)
+192.168.1.2 = IP Address on network to next network card
+1 = Backplane
+5 = Slot 5</code></pre></div><p id="1498421842#-uyjqk0_86">The device originating the message sends the message out port 1, which is the Backplane of the PLC. It is then routed by the backplane to slot 2 which has an Ethernet card in the slot. Then from the Ethernet card, the message is routed out port 2, which is the ethernet port. Then on the network, the message is sent to address 192.168.1.2, which is the address of another ethernet card. From that ethernet card, the message is routed out port 1 to the backplane, then to card in slot 5</p></section><section class="detached"><h3 id="1498421842#another-complex-path-example-controlnet-hop" data-toc="another-complex-path-example-controlnet-hop#CIP-CTF.md-another-complex-path-example-controlnet-hop">Another Complex Path Example: ControlNet Hop</h3><p id="1498421842#-uyjqk0_89">Path: <span class="inline-code" id="1498421842#-uyjqk0_92">1,2,2,3,1,0</span> Explanation:</p><div class="detached code-block" id="1498421842#-uyjqk0_90"><pre><code class="language-none">1 = Backplane
+2 = Slot 2 (Slot of ControlNet card)
+2 = Port 2 (ControlNet Port)
+3 = ControlNet Address on network to next ControlNet card
+1 = Backplane
+0 = Slot 0</code></pre></div><p id="1498421842#-uyjqk0_91">The device originating the message sends the message out port 1, which is the Backplane of the PLC. It is then routed by the backplane to slot 2 which has an ControlNet card in the slot. Then from the ControlNet card, the message is routed out port 2, which is the ControlNet port. Then on the network, the message is sent to address 3, which is the address of another ControlNet card. From that ControlNet card, the message is routed out port 1 to the backplane, then to card in slot 0</p></section></section><section class="detached"><h2 id="1498421842#cip-connections" data-toc="cip-connections#CIP-CTF.md-cip-connections">CIP Connections</h2><p id="1498421842#-uyjqk0_94">CIP supports different connection types for communication, balancing reliability, efficiency, and real-time needs. Connections manage how messages are sent and resources are allocated.</p><ul class="list" id="1498421842#-uyjqk0_95" start="1"><li class="list-item" id="1498421842#-uyjqk0_97"><p id="1498421842#-uyjqk0_100"><span class="control" id="1498421842#-uyjqk0_101">UCMM (Unconnected Message Manager)</span>: Handles unconnected explicit messages. No prior connection is established; each message is self-contained. Used for infrequent, on-demand requests like configuration or diagnostics. Managed by the device's UCMM, which processes these without reserving resources.</p></li><li class="list-item" id="1498421842#-uyjqk0_98"><p id="1498421842#-uyjqk0_102"><span class="control" id="1498421842#-uyjqk0_103">Unconnected</span>: Refers to explicit messaging without a dedicated connection (via UCMM). Messages are sent as needed, ideal for low-priority, non-real-time tasks. No ongoing session, so each request/response pair stands alone.</p></li><li class="list-item" id="1498421842#-uyjqk0_99"><p id="1498421842#-uyjqk0_104"><span class="control" id="1498421842#-uyjqk0_106">Connected</span>: Reserves resources for reliable communication. Divided into:</p><ul class="list" id="1498421842#-uyjqk0_105" start="1"><li class="list-item" id="1498421842#-uyjqk0_107"><p id="1498421842#-uyjqk0_109"><span class="control" id="1498421842#-uyjqk0_110">Explicit Messaging (Class 3)</span>: Client/server style for request/response, like reading/writing attributes. Establishes a connection first (using Forward_Open service), ensuring delivery but with overhead.</p></li><li class="list-item" id="1498421842#-uyjqk0_108"><p id="1498421842#-uyjqk0_111"><span class="control" id="1498421842#-uyjqk0_112">Implicit Messaging (Class 0/1)</span>: For real-time I/O data exchange, like cyclic sensor data. No headers per message; data is sent at fixed intervals. Class 0 is unacknowledged (faster), Class 1 is acknowledged.</p></li></ul></li></ul><p id="1498421842#-uyjqk0_96">Explicit connections are for information (e.g., HMI to PLC), while implicit are for control (e.g., I/O scanning). Connections are opened, used, and closed to manage bandwidth.</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="80992699">Tools</h1><p id="80992699#d7if47_3">There are several key tools that are used by Engineers to manage CIP networks and devices.</p><p id="80992699#d7if47_4">A common tool to use is Rockwell's RSLinx or FactoryTalk Linx. A free version can be downloaded on their website (Requires creating a free account): RSLinx Free Download (<a href="https://compatibility.rockwellautomation.com/Pages/MultiProductFindDownloads.aspx?crumb=112&amp;mode=3&amp;refSoft=1&amp;versions=59075">https://compatibility.rockwellautomation.com/Pages/MultiProductFindDownloads.aspx?crumb=112&mode=3&refSoft=1&versions=59075</a>)</p><p id="80992699#d7if47_5">Another common tool is the Molex EIP tool. This is a free tool that can be downloaded from Molex (No account required): Molex EIP Tool v2.6.1 (<a href="https://tools.molex.com/webdocs/mysst/EIP%20Tool%20v2.6.1.zip">https://tools.molex.com/webdocs/mysst/EIP%20Tool%20v2.6.1.zip</a>)</p><p id="80992699#d7if47_6">When using scripting to access CIP devices, Python is a common tool. See the ICS Village github for a python cip tool: ICS Village CTF GitHub (<a href="https://github.com/ICSVillage/CTF">https://github.com/ICSVillage/CTF</a>)</p><p id="80992699#d7if47_7">These tools are also provided as downloads via the CTF.</p></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1218394691">Identity Object (0x01)</h1><p id="-1218394691#tpnanf_3">The CIP Device Identity Object</p><section class="detached"><h2 id="-1218394691#overview" data-toc="overview#IdentityObject.md-overview">Overview</h2><ul class="list" id="-1218394691#tpnanf_9" start="1"><li class="list-item" id="-1218394691#tpnanf_10"><p id="-1218394691#tpnanf_14"><span class="control" id="-1218394691#tpnanf_15">Class Code</span>: <span class="inline-code" id="-1218394691#tpnanf_16">0x01</span></p></li><li class="list-item" id="-1218394691#tpnanf_11"><p id="-1218394691#tpnanf_17"><span class="control" id="-1218394691#tpnanf_18">Purpose</span>: Provides device identification and general status information.</p></li><li class="list-item" id="-1218394691#tpnanf_12"><p id="-1218394691#tpnanf_19"><span class="control" id="-1218394691#tpnanf_20">Instances</span>: Typically, a device has one instance (Instance 1) of the Identity Object.</p></li><li class="list-item" id="-1218394691#tpnanf_13"><p id="-1218394691#tpnanf_21"><span class="control" id="-1218394691#tpnanf_22">Access</span>: Attributes are generally read-only, except for specific services like Reset.</p></li></ul></section><section class="detached"><h2 id="-1218394691#attributes" data-toc="attributes#IdentityObject.md-attributes">Attributes</h2><p id="-1218394691#tpnanf_23">The Identity Object includes several attributes that describe the device's identity and status. The following are the common attributes defined in the CIP specification:</p><div class="table-wrapper detached"><table id="-1218394691#tpnanf_24"><tr class="header-row" id="-1218394691#tpnanf_26"><th id="-1218394691#tpnanf_34"><p>Attribute ID</p></th><th id="-1218394691#tpnanf_35"><p>Name</p></th><th id="-1218394691#tpnanf_36"><p>Data Type</p></th><th id="-1218394691#tpnanf_37"><p>Description</p></th><th id="-1218394691#tpnanf_38"><p>Access</p></th></tr><tr class="" id="-1218394691#tpnanf_27"><td id="-1218394691#tpnanf_39"><p>1</p></td><td id="-1218394691#tpnanf_40"><p>Vendor ID</p></td><td id="-1218394691#tpnanf_41"><p>UINT</p></td><td id="-1218394691#tpnanf_42"><p>Unique identifier of the device vendor (assigned by ODVA).</p></td><td id="-1218394691#tpnanf_43"><p>Read</p></td></tr><tr class="" id="-1218394691#tpnanf_28"><td id="-1218394691#tpnanf_44"><p>2</p></td><td id="-1218394691#tpnanf_45"><p>Device Type</p></td><td id="-1218394691#tpnanf_46"><p>UINT</p></td><td id="-1218394691#tpnanf_47"><p>Indicates the general type of device (e.g., PLC, sensor, drive).</p></td><td id="-1218394691#tpnanf_48"><p>Read</p></td></tr><tr class="" id="-1218394691#tpnanf_29"><td id="-1218394691#tpnanf_49"><p>3</p></td><td id="-1218394691#tpnanf_50"><p>Product Code</p></td><td id="-1218394691#tpnanf_51"><p>UINT</p></td><td id="-1218394691#tpnanf_52"><p>Vendor-specific code identifying the product.</p></td><td id="-1218394691#tpnanf_53"><p>Read</p></td></tr><tr class="" id="-1218394691#tpnanf_30"><td id="-1218394691#tpnanf_54"><p>4</p></td><td id="-1218394691#tpnanf_55"><p>Revision</p></td><td id="-1218394691#tpnanf_56"><p>STRUCT of USINT</p></td><td id="-1218394691#tpnanf_57"><p>Major and minor firmware/hardware revision (e.g., Major.Minor).</p></td><td id="-1218394691#tpnanf_58"><p>Read</p></td></tr><tr class="" id="-1218394691#tpnanf_31"><td id="-1218394691#tpnanf_59"><p>5</p></td><td id="-1218394691#tpnanf_60"><p>Status</p></td><td id="-1218394691#tpnanf_61"><p>WORD</p></td><td id="-1218394691#tpnanf_62"><p>Current status of the device (e.g., owned, configured, faulted).</p></td><td id="-1218394691#tpnanf_63"><p>Read</p></td></tr><tr class="" id="-1218394691#tpnanf_32"><td id="-1218394691#tpnanf_64"><p>6</p></td><td id="-1218394691#tpnanf_65"><p>Serial Number</p></td><td id="-1218394691#tpnanf_66"><p>UDINT</p></td><td id="-1218394691#tpnanf_67"><p>Unique serial number for the device.</p></td><td id="-1218394691#tpnanf_68"><p>Read</p></td></tr><tr class="" id="-1218394691#tpnanf_33"><td id="-1218394691#tpnanf_69"><p>7</p></td><td id="-1218394691#tpnanf_70"><p>Product Name</p></td><td id="-1218394691#tpnanf_71"><p>SHORT_STRING</p></td><td id="-1218394691#tpnanf_72"><p>Human-readable name or description of the device.</p></td><td id="-1218394691#tpnanf_73"><p>Read</p></td></tr></table></div><section class="detached"><h3 id="-1218394691#notes-on-attributes" data-toc="notes-on-attributes#IdentityObject.md-notes-on-attributes">Notes on Attributes</h3><ul class="list" id="-1218394691#tpnanf_74" start="1"><li class="list-item" id="-1218394691#tpnanf_75"><p id="-1218394691#tpnanf_81"><span class="control" id="-1218394691#tpnanf_82">Vendor ID</span>: Assigned by ODVA (Open DeviceNet Vendor Association) to uniquely identify the manufacturer.</p></li><li class="list-item" id="-1218394691#tpnanf_76"><p id="-1218394691#tpnanf_83"><span class="control" id="-1218394691#tpnanf_84">Device Type</span>: Maps to a predefined list of device profiles (e.g., 0x02 for AC drives, 0x0C for communications adapter).</p></li><li class="list-item" id="-1218394691#tpnanf_77"><p id="-1218394691#tpnanf_85"><span class="control" id="-1218394691#tpnanf_86">Revision</span>: Split into Major and Minor fields to indicate significant or minor changes in firmware/hardware.</p></li><li class="list-item" id="-1218394691#tpnanf_78"><p id="-1218394691#tpnanf_87"><span class="control" id="-1218394691#tpnanf_88">Status</span>: A bit field indicating various states (e.g., bit 0: Owned, bit 4-7: Device state like running or faulted).</p></li><li class="list-item" id="-1218394691#tpnanf_79"><p id="-1218394691#tpnanf_89"><span class="control" id="-1218394691#tpnanf_90">Serial Number</span>: Must be unique for each device within a vendor&rsquo;s product line.</p></li><li class="list-item" id="-1218394691#tpnanf_80"><p id="-1218394691#tpnanf_91"><span class="control" id="-1218394691#tpnanf_92">Product Name</span>: A string limited to 32 characters in most implementations.</p></li></ul></section></section><section class="detached"><h2 id="-1218394691#services" data-toc="services#IdentityObject.md-services">Services</h2><p id="-1218394691#tpnanf_93">The Identity Object supports several services to interact with its attributes or control the device. Common services include:</p><div class="table-wrapper detached"><table id="-1218394691#tpnanf_94"><tr class="header-row" id="-1218394691#tpnanf_96"><th id="-1218394691#tpnanf_101"><p>Service Code</p></th><th id="-1218394691#tpnanf_102"><p>Name</p></th><th id="-1218394691#tpnanf_103"><p>Description</p></th></tr><tr class="" id="-1218394691#tpnanf_97"><td id="-1218394691#tpnanf_104"><p>0x01</p></td><td id="-1218394691#tpnanf_105"><p>Get_Attributes_All</p></td><td id="-1218394691#tpnanf_106"><p>Retrieves all attributes of the Identity Object in a single response.</p></td></tr><tr class="" id="-1218394691#tpnanf_98"><td id="-1218394691#tpnanf_107"><p>0x05</p></td><td id="-1218394691#tpnanf_108"><p>Reset</p></td><td id="-1218394691#tpnanf_109"><p>Initiates a device reset (e.g., power cycle, factory reset).</p></td></tr><tr class="" id="-1218394691#tpnanf_99"><td id="-1218394691#tpnanf_110"><p>0x0E</p></td><td id="-1218394691#tpnanf_111"><p>Get_Attribute_Single</p></td><td id="-1218394691#tpnanf_112"><p>Retrieves the value of a single specified attribute.</p></td></tr><tr class="" id="-1218394691#tpnanf_100"><td id="-1218394691#tpnanf_113"><p>0x10</p></td><td id="-1218394691#tpnanf_114"><p>Set_Attribute_Single</p></td><td id="-1218394691#tpnanf_115"><p>Sets the value of a single specified attribute (if writable).</p></td></tr></table></div><section class="detached"><h3 id="-1218394691#reset-service-types" data-toc="reset-service-types#IdentityObject.md-reset-service-types">Reset Service Types</h3><p id="-1218394691#tpnanf_116">The Reset service (0x05) supports different reset types, typically specified in the service data:</p><ul class="list" id="-1218394691#tpnanf_117" start="1"><li class="list-item" id="-1218394691#tpnanf_118"><p id="-1218394691#tpnanf_121"><span class="control" id="-1218394691#tpnanf_122">Type 0</span>: Power cycle (simulates power off/on).</p></li><li class="list-item" id="-1218394691#tpnanf_119"><p id="-1218394691#tpnanf_123"><span class="control" id="-1218394691#tpnanf_124">Type 1</span>: Factory reset (returns to out-of-box settings).</p></li><li class="list-item" id="-1218394691#tpnanf_120"><p id="-1218394691#tpnanf_125"><span class="control" id="-1218394691#tpnanf_126">Additional types</span>: May be vendor-specific (e.g., reboot to bootloader).</p></li></ul></section></section><section class="detached"><h2 id="-1218394691#instance-and-class-details" data-toc="instance-and-class-details#IdentityObject.md-instance-and-class-details">Instance and Class Details</h2><ul class="list" id="-1218394691#tpnanf_127" start="1"><li class="list-item" id="-1218394691#tpnanf_128"><p id="-1218394691#tpnanf_132"><span class="control" id="-1218394691#tpnanf_133">Class Attributes</span>: Typically include revision and instance count information.</p></li><li class="list-item" id="-1218394691#tpnanf_129"><p id="-1218394691#tpnanf_134"><span class="control" id="-1218394691#tpnanf_135">Instance Attributes</span>: Instance 1 contains the device-specific identity data (as listed above).</p></li><li class="list-item" id="-1218394691#tpnanf_130"><p id="-1218394691#tpnanf_136"><span class="control" id="-1218394691#tpnanf_137">Mandatory Attributes</span>: Attributes 1&ndash;7 are required for compliance with CIP standards.</p></li><li class="list-item" id="-1218394691#tpnanf_131"><p id="-1218394691#tpnanf_138"><span class="control" id="-1218394691#tpnanf_139">Optional Attributes</span>: Vendors may add custom attributes (e.g., Attribute 8 and above) for additional device-specific information.</p></li></ul></section><section class="detached"><h2 id="-1218394691#usage" data-toc="usage#IdentityObject.md-usage">Usage</h2><ul class="list" id="-1218394691#tpnanf_140" start="1"><li class="list-item" id="-1218394691#tpnanf_141"><p id="-1218394691#tpnanf_144">The Identity Object is used during device discovery and configuration in CIP networks.</p></li><li class="list-item" id="-1218394691#tpnanf_142"><p id="-1218394691#tpnanf_145">It allows network tools or controllers to identify devices, check their status, and perform basic operations like resets.</p></li><li class="list-item" id="-1218394691#tpnanf_143"><p id="-1218394691#tpnanf_146">Commonly accessed during network commissioning or diagnostics.</p></li></ul></section></article></div></section></div></body></html>
