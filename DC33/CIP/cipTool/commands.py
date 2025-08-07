@@ -28,7 +28,7 @@ def cmdReconnect():
 
 
 def cmdDisconnect():
-    if data.driver is not None and data.driver.connected:
+    if data.driver is not None:
         data.driver.close()
         print('Disconnected')
     else:

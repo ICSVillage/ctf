@@ -18,6 +18,16 @@ Each network that transports CIP is designed for inter-compatability. This means
 network is also used on another network. 
 
 
+## Getting Started
+1. Connect to the wifi: DC33-PLCS
+	- Password: ICSVILLAGE
+	
+2. Install provided [Tools](Tools.md)
+
+3. If wanting to take a pcap, hook up to the green ethernet cable and profit!
+    - It is on a mirror port for the entire switch
+
+
 ## CIP Object Model
 
 CIP is a protocol similar to a Remote Procedure Call (RPC) protocol.
