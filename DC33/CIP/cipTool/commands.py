@@ -118,19 +118,21 @@ def cmdKeyPosMsg():
         print("Please connect to a device")
         return
     result = util.sendRequest(0x0E, 0x01, 0x01, 0x05)
+    print("Mode: " + format(result.value[0], 'b'))
+    print("Key: " + format(result.value[1], 'b'))
     if result.error is None:
-        if result.value[0] & 0b01110000:
+        if result.value[0] & 0b01110000 == 0b01110000:
             print("Mode: Program")
-        elif result.value[0] & 0b01100000:
+        elif result.value[0] & 0b01100000 == 0b01100000:
             print("Mode: Run")
         else:
             print("Mode: Unknown")
 
-        if result.value[1] & 0b00110000:
+        if result.value[1] & 0b00110000 == 0b00110000:
             print("Key Position: Remote")
-        elif result.value[1] & 0b00100000:
+        elif result.value[1] & 0b00100000 == 0b00100000:
             print("Key Position: Program")
-        elif result.value[1] & 0b00010000:
+        elif result.value[1] & 0b00010000 == 0b00010000:
             print("Key Position: Run")
         else:
             print("Key Position: Unknown")
